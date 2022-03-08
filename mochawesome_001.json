@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2022-03-08T06:58:54.953Z",
-    "end": "2022-03-08T06:59:12.672Z",
-    "duration": 17719,
+    "start": "2022-03-08T07:00:27.440Z",
+    "end": "2022-03-08T07:00:44.496Z",
+    "duration": 17056,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "93fecb56-4d36-4b9f-822e-7fd9e27c878b",
+      "uuid": "4c48031f-adfd-409b-a569-b7c84d683f6a",
       "title": "",
       "fullFile": "cypress/integration/cadastro.spec.js",
       "file": "cypress/integration/cadastro.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c9c782cf-c522-49d9-bb13-fbe173e76106",
+          "uuid": "0b05d9c3-d769-4326-98d6-075e9eb493ac",
           "title": "Cadastro",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Deve realizar o cadastro",
               "fullTitle": "Cadastro Deve realizar o cadastro",
               "timedOut": null,
-              "duration": 14820,
+              "duration": 13389,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender2`, but never found it.\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress/integration/cadastro.spec.js:116:27)",
                 "diff": null
               },
-              "uuid": "48274413-2ec7-4169-8bdd-9421516df257",
-              "parentUUID": "c9c782cf-c522-49d9-bb13-fbe173e76106",
+              "uuid": "52d028ea-5298-46b8-8374-5b5d7e76d3c8",
+              "parentUUID": "0b05d9c3-d769-4326-98d6-075e9eb493ac",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "48274413-2ec7-4169-8bdd-9421516df257"
+            "52d028ea-5298-46b8-8374-5b5d7e76d3c8"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 14820,
+          "duration": 13389,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
