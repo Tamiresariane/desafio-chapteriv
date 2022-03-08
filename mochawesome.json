@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2022-03-08T06:46:35.233Z",
-    "end": "2022-03-08T06:46:51.486Z",
-    "duration": 16253,
+    "start": "2022-03-08T07:02:33.442Z",
+    "end": "2022-03-08T07:02:48.955Z",
+    "duration": 15513,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "0c751922-4659-4cc0-8a2f-24e48c76c564",
+      "uuid": "81adbbf7-a2b7-4aa1-bdca-f6d5a4a416bf",
       "title": "",
       "fullFile": "cypress/integration/cadastro.spec.js",
       "file": "cypress/integration/cadastro.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "82feef6f-3308-4961-a63d-27877d6af45c",
+          "uuid": "52068116-7620-4d13-94fd-5ee6ea3a2442",
           "title": "Cadastro",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Deve realizar o cadastro",
               "fullTitle": "Cadastro Deve realizar o cadastro",
               "timedOut": null,
-              "duration": 13765,
+              "duration": 12824,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender2`, but never found it.\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress/integration/cadastro.spec.js:116:27)",
                 "diff": null
               },
-              "uuid": "794c9501-c5c6-4c42-814f-a3939a135df5",
-              "parentUUID": "82feef6f-3308-4961-a63d-27877d6af45c",
+              "uuid": "ad23fae7-ebac-408e-9a16-963659d34292",
+              "parentUUID": "52068116-7620-4d13-94fd-5ee6ea3a2442",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "794c9501-c5c6-4c42-814f-a3939a135df5"
+            "ad23fae7-ebac-408e-9a16-963659d34292"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 13765,
+          "duration": 12824,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -105,7 +105,7 @@
         "html": false,
         "json": true
       },
-      "version": "6.1.1"
+      "version": "6.0.1"
     }
   }
 }
