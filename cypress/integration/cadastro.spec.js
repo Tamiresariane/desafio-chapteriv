@@ -1,5 +1,8 @@
 /// <reference types="cypress" />
 
+var Chance = require('chance')
+var chance = new Chance()
+
 context('Cadastro', () => {
     beforeEach(() => {
       cy.visit('http://automationpractice.com/index.php');
@@ -14,7 +17,7 @@ context('Cadastro', () => {
       cy.get('.header_user_info > .login').click();
       cy.url().should('include', '/index.php?controller=authentication&back=my-account');
       //digitar um endereço de email 
-      cy.get('.form-group > #email_create').should('be.visible').type('tamires1@example.com');
+      cy.get('.form-group > #email_create').should('be.visible').type(chance.email());
       cy.get('.submit > #SubmitCreate').should('be.visible').click();
 
 
@@ -43,8 +46,6 @@ context('Cadastro', () => {
       cy.get('#phone_mobile').type('00 00000-0000');
       cy.get('#alias').type('casa');
       cy.get('#submitAccount').click();
-
-      cy.pause();
 
     });
 
