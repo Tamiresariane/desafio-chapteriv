@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-03-08T06:46:35.233Z",
+    "end": "2022-03-08T06:46:51.486Z",
+    "duration": 16253,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0c751922-4659-4cc0-8a2f-24e48c76c564",
+      "title": "",
+      "fullFile": "cypress/integration/cadastro.spec.js",
+      "file": "cypress/integration/cadastro.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "82feef6f-3308-4961-a63d-27877d6af45c",
+          "title": "Cadastro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve realizar o cadastro",
+              "fullTitle": "Cadastro Deve realizar o cadastro",
+              "timedOut": null,
+              "duration": 13765,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('POST', 'http://automationpractice.com/index.php').as('CreateAnAccountRequest'); //clicar botão Sign in\ncy.get('.header_user_info > .login').click();\ncy.url().should('include', '/index.php?controller=authentication&back=my-account'); //digitar um endereço de email \ncy.get('.form-group > #email_create').should('be.visible').type('tamires1@example.com');\ncy.get('.submit > #SubmitCreate').should('be.visible').click();\ncy.wait('@CreateAnAccountRequest').then(res => {\n  expect(res.response.statusCode).to.equal(200);\n}); //cadastro\ncy.get('#id_gender2').should('be.visible').check();\ncy.get('#customer_firstname').type('Tamires');\ncy.get('#customer_lastname').type('QA');\ncy.get('#passwd').type('123456');\ncy.get('#days').select('16');\ncy.get('#months').select('August');\ncy.get('#years').select('1997');\ncy.get('#newsletter').check();\ncy.get('#optin').check(); //address\ncy.get('#firstname').type('Tamires');\ncy.get('#lastname').type('QA');\ncy.get('#address1').type('rua felipe');\ncy.get('#city').type('Russas');\ncy.get('#postcode').type('12345');\ncy.get('#id_state').select('New York');\ncy.get('#phone_mobile').type('00 00000-0000');\ncy.get('#alias').type('casa');\ncy.get('#submitAccount').click();\ncy.pause();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender2`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender2`, but never found it.\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress/integration/cadastro.spec.js:116:27)",
+                "diff": null
+              },
+              "uuid": "794c9501-c5c6-4c42-814f-a3939a135df5",
+              "parentUUID": "82feef6f-3308-4961-a63d-27877d6af45c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "794c9501-c5c6-4c42-814f-a3939a135df5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13765,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.1.1"
+    }
+  }
+}
