@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2022-03-08T07:02:33.442Z",
-    "end": "2022-03-08T07:02:48.955Z",
-    "duration": 15513,
+    "failures": 0,
+    "start": "2022-03-08T07:25:53.215Z",
+    "end": "2022-03-08T07:26:16.640Z",
+    "duration": 23425,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "81adbbf7-a2b7-4aa1-bdca-f6d5a4a416bf",
+      "uuid": "76e3d058-0d2b-4382-a37f-e6b8800d34bd",
       "title": "",
       "fullFile": "cypress/integration/cadastro.spec.js",
       "file": "cypress/integration/cadastro.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "52068116-7620-4d13-94fd-5ee6ea3a2442",
+          "uuid": "7e7c4aca-56cd-4556-a823-2db4b1b9c7ea",
           "title": "Cadastro",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "Deve realizar o cadastro",
               "fullTitle": "Cadastro Deve realizar o cadastro",
               "timedOut": null,
-              "duration": 12824,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 20465,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.intercept('POST', 'http://automationpractice.com/index.php').as('CreateAnAccountRequest'); //clicar botão Sign in\ncy.get('.header_user_info > .login').click();\ncy.url().should('include', '/index.php?controller=authentication&back=my-account'); //digitar um endereço de email \ncy.get('.form-group > #email_create').should('be.visible').type('tamires1@example.com');\ncy.get('.submit > #SubmitCreate').should('be.visible').click();\ncy.wait('@CreateAnAccountRequest').then(res => {\n  expect(res.response.statusCode).to.equal(200);\n}); //cadastro\ncy.get('#id_gender2').should('be.visible').check();\ncy.get('#customer_firstname').type('Tamires');\ncy.get('#customer_lastname').type('QA');\ncy.get('#passwd').type('123456');\ncy.get('#days').select('16');\ncy.get('#months').select('August');\ncy.get('#years').select('1997');\ncy.get('#newsletter').check();\ncy.get('#optin').check(); //address\ncy.get('#firstname').type('Tamires');\ncy.get('#lastname').type('QA');\ncy.get('#address1').type('rua felipe');\ncy.get('#city').type('Russas');\ncy.get('#postcode').type('12345');\ncy.get('#id_state').select('New York');\ncy.get('#phone_mobile').type('00 00000-0000');\ncy.get('#alias').type('casa');\ncy.get('#submitAccount').click();\ncy.pause();",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender2`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender2`, but never found it.\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress/integration/cadastro.spec.js:116:27)",
-                "diff": null
-              },
-              "uuid": "ad23fae7-ebac-408e-9a16-963659d34292",
-              "parentUUID": "52068116-7620-4d13-94fd-5ee6ea3a2442",
+              "code": "cy.intercept('POST', 'http://automationpractice.com/index.php').as('CreateAnAccountRequest'); //clicar botão Sign in\ncy.get('.header_user_info > .login').click();\ncy.url().should('include', '/index.php?controller=authentication&back=my-account'); //digitar um endereço de email \ncy.get('.form-group > #email_create').should('be.visible').type(chance.email());\ncy.get('.submit > #SubmitCreate').should('be.visible').click();\ncy.wait('@CreateAnAccountRequest').then(res => {\n  expect(res.response.statusCode).to.equal(200);\n}); //cadastro\ncy.get('#id_gender2').should('be.visible').check();\ncy.get('#customer_firstname').type('Tamires');\ncy.get('#customer_lastname').type('QA');\ncy.get('#passwd').type('123456');\ncy.get('#days').select('16');\ncy.get('#months').select('August');\ncy.get('#years').select('1997');\ncy.get('#newsletter').check();\ncy.get('#optin').check(); //address\ncy.get('#firstname').type('Tamires');\ncy.get('#lastname').type('QA');\ncy.get('#address1').type('rua felipe');\ncy.get('#city').type('Russas');\ncy.get('#postcode').type('12345');\ncy.get('#id_state').select('New York');\ncy.get('#phone_mobile').type('00 00000-0000');\ncy.get('#alias').type('casa');\ncy.get('#submitAccount').click();",
+              "err": {},
+              "uuid": "a1b046c6-2cb6-437b-b498-9ff63bb4fb35",
+              "parentUUID": "7e7c4aca-56cd-4556-a823-2db4b1b9c7ea",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "ad23fae7-ebac-408e-9a16-963659d34292"
+          "passes": [
+            "a1b046c6-2cb6-437b-b498-9ff63bb4fb35"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 12824,
+          "duration": 20465,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -105,7 +101,7 @@
         "html": false,
         "json": true
       },
-      "version": "6.0.1"
+      "version": "6.1.1"
     }
   }
 }
